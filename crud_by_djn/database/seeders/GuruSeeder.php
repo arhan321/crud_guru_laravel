@@ -14,20 +14,20 @@ class GuruSeeder extends Seeder
     {
         $data = [
             [
-                'id' => 1,
-                'first_name' => 'Arhan',
+                'id'         => 1,
+                'first_name'  => 'Arhan',
                 'middle_name' => 'malik',
-                'last_name' => 'malik',
-                'birth_dath' => '2000-01-01',
-                'foto' => '0d2R0vHNaeJL6uSMxUBBBwQHXKSow7gomtAIbN42.jpg',
+                'last_name'   => 'malik',
+                'birth_dath'  => '2000-01-01',
+                'foto'        => '0d2R0vHNaeJL6uSMxUBBBwQHXKSow7gomtAIbN42.jpg',
             ],
             [
-                'id' => 2,
-                'first_name' => 'djons',
+                'id'         => 2,
+                'first_name'  => 'djons',
                 'middle_name' => 'sjons',
-                'last_name' => 'djons',
-                'birth_dath' => '1989-01-01',
-                'foto' => 'SPupybZ0ZRhzSu8BvaUQetOt3ywNtoJVG5ZtJgES.jpg',
+                'last_name'   => 'djons',
+                'birth_dath'  => '1989-01-01',
+                'foto'        => 'SPupybZ0ZRhzSu8BvaUQetOt3ywNtoJVG5ZtJgES.jpg',
             ],
         ];
 

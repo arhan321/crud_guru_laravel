@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GuruController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -21,5 +23,16 @@ use App\Http\Controllers\GuruController;
 // Route::delete('/delete/{id}',[GuruController::class, 'destroy'])->name('guru.destroy');
 
 //atau pake yang ini sudah mendefinisikan semua route
-Route::get('/', [GuruController::class, 'index']);
-Route::resource('guru', GuruController::class);
+// Group route yang memerlukan autentikasi
+Route::middleware(['auth'])->group(function () {
+    Route::get('/', [GuruController::class, 'index'])->name('guru.index');
+    Route::resource('guru', GuruController::class);
+});
+
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
+
